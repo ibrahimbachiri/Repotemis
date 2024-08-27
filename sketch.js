@@ -1,10 +1,18 @@
 let inputEmail;
 let btnSubmit;
+let Home;
 
 function setup() {
   
-   createCanvas(900,200); // We don't need a canvas for this
+   createCanvas(1920,1080); // We don't need a canvas for this
+  fill('#9973A0'); // Or use fill(255, 0, 0) for the red color
+  Home = createButton('HOME');
+  Home.position(0,10)
+  Home.style('background-color','#AEA1B1');
+  Home.style('text-color','#AEA1B1');
+
   
+  rect(0, 50, 1920, 800);  
   // Select the form elements from the HTML
   inputEmail = select('input[name="user_email"]');
   btnSubmit = select('input[type="submit"]');
@@ -15,29 +23,31 @@ function setup() {
   inputEmail.style('padding', '10px');
   inputEmail.style('font-size', '16px');
   inputEmail.style('border', '2px solid #ccc');
-  inputEmail.style('border-radius', '14px');
+  inputEmail.style('border-radius', '24px');
     inputEmail.attribute('placeholder', 'Email us');
 
 
   // Position and style the Submit button
-  btnSubmit.position(300, 98);
-  btnSubmit.style('width', '320px');
+  btnSubmit.position(300, 95);
+  btnSubmit.style('width', '200px');
+    btnSubmit.style('height', '50px');
+
   btnSubmit.style('padding', '12px');
   btnSubmit.style('font-size', '18px');
   btnSubmit.style('background-color', '#9F44AF');
   btnSubmit.style('color', 'white');
   btnSubmit.style('border', 'none');
-  btnSubmit.style('border-radius', '14px');
+  btnSubmit.style('border-radius', '24px');
   btnSubmit.style('cursor', 'pointer');
 
   // Add hover effect to the Submit button
   btnSubmit.mouseOver(() => {
-    btnSubmit.style('background-color', '#45a049');
+    btnSubmit.style('background-color', '#691877');
   });
   
-  btnSubmit.mouseOut(() => {
-    btnSubmit.style('background-color', '#4CAF50');
-  });
+  // btnSubmit.mouseOut(() => {
+  //   btnSubmit.style('background-color', '#470F50');
+  // });
 
   
   
